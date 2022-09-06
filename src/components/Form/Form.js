@@ -100,7 +100,12 @@ const Form = (props) => {
     <form autoComplete="off" className={classes.form}>
       <div className={classes.info}>
         <label htmlFor="name">cardholder name</label>
-        <input type="text" id="name" placeholder="e.g. Jane Appleseed" />
+        <input
+          type="text"
+          id="name"
+          placeholder="e.g. Jane Appleseed"
+          autoComplete="tel"
+        />
         <p className={classes.cardError} id="nameError">
           Please enter your name
         </p>
@@ -113,6 +118,7 @@ const Form = (props) => {
           placeholder="e.g. 1234 5678 9123 0000"
           maxLength="19"
           onKeyPress={onChange}
+          autoComplete="tel"
         />
         <p className={classes.cardError} id="cardNumError"></p>
       </div>
@@ -121,10 +127,28 @@ const Form = (props) => {
         <label htmlFor="month">exp. date (mm/yy)</label>
         <label htmlFor="cvc">cvc</label>
         <div className={classes.dateInput}>
-          <input type="text" id="month" placeholder="MM" maxLength="2" />
-          <input type="text" id="year" placeholder="YY" maxLength="2" />
+          <input
+            type="text"
+            id="month"
+            placeholder="MM"
+            maxLength="2"
+            autoComplete="tel"
+          />
+          <input
+            type="text"
+            id="year"
+            placeholder="YY"
+            maxLength="2"
+            autoComplete="tel"
+          />
         </div>
-        <input type="text" id="cvc" placeholder="e.g. 123" maxLength="3" />
+        <input
+          type="text"
+          id="cvc"
+          placeholder="e.g. 123"
+          maxLength="3"
+          autoComplete="tel"
+        />
         <p className={classes.cardError} id="dateError">
           Can't be blank
         </p>
