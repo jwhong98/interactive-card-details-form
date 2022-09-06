@@ -1,0 +1,49 @@
+.thankYou {
+  height: 100%;
+  width: 100%;
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+img {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: hsl(278, 68%, 11%);
+}
+
+.message {
+  letter-spacing: 1px;
+  color: hsl(279, 6%, 55%);
+}
+
+button {
+  width: 100%;
+  background: hsl(278, 68%, 11%);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 15px 0;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1281px) {
+  .thankYou {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    left: 100px;
+  }
+}

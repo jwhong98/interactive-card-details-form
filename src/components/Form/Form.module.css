@@ -1,0 +1,90 @@
+.form {
+  height: 100%;
+  max-width: 550px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cardError {
+  display: none;
+  font-size: 12px;
+  color: hsl(0, 100%, 66%);
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: hsl(278, 68%, 11%);
+}
+
+input {
+  border: 1px solid hsl(270, 3%, 87%);
+  outline: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+
+input:focus {
+  border-image-source: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  border-width: 1px;
+  border-image-slice: 1;
+  outline: none;
+  border-radius: 8px;
+}
+
+input:invalid {
+  border: 1px solid hsl(0, 100%, 66%);
+}
+
+.cardInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.cardInfo input {
+  min-width: 0;
+}
+
+.dateInput {
+  display: flex;
+  min-width: 0;
+  gap: 5px;
+}
+
+#dateError {
+}
+
+.submit {
+  background: hsl(278, 68%, 11%);
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 15px 0;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1281px) {
+  .form {
+    position: relative;
+    left: 100px;
+    max-width: 450px;
+  }
+}

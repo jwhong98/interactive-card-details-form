@@ -1,0 +1,153 @@
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 30% 1fr;
+}
+
+header {
+  background: url("../../images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.cardContainer {
+  width: 100%;
+  max-width: 500px;
+  position: absolute;
+  top: 30px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.cardBack {
+  background: url("../../images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  width: 290px;
+  height: 165px;
+  align-self: flex-end;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.cvc {
+  font-size: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.cardFront {
+  background: url("../../images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  width: 290px;
+  height: 165px;
+  position: relative;
+  top: -72px;
+  z-index: 4;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.cardLogo {
+  align-self: flex-start;
+  width: 55px;
+}
+
+.cardFrontInfo {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 2px;
+}
+
+.sub {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+.cardName,
+.cardExp {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 1281px) {
+  main {
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: none;
+  }
+
+  .cardContainer {
+    height: 490px;
+    max-width: 450px;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    left: 10vw;
+    margin: auto 0;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .cardBack {
+    width: 100%;
+    max-width: 450px;
+    height: 230px;
+    bottom: 0;
+    position: relative;
+    left: 100px;
+  }
+
+  .cardFront {
+    width: 100%;
+    max-width: 450px;
+    height: 230px;
+    top: 0;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  .cardFront {
+    padding: 25px;
+  }
+
+  .cardLogo {
+    width: 70px;
+  }
+
+  .cardFrontInfo {
+    letter-spacing: 3px;
+  }
+
+  .cardNum {
+    font-size: 25px;
+  }
+
+  .cardName,
+  .cardExp,
+  .cvc {
+    font-size: 13px;
+    letter-spacing: 3px;
+  }
+}
